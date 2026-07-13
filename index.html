@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="สมัครงานออนไลน์ บริษัท ไทยฟู้ดส์ อาหารสัตว์ จำกัด (TFFM) — กรอกใบสมัครงานได้ง่ายๆ ทุกที่ทุกเวลา" />
+  <title>สมัครงาน | บริษัท ไทยฟู้ดส์ อาหารสัตว์ จำกัด</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="app-wrapper">
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="app-header">
+    <div class="app-header__logo-wrap">
+      <img src="logo TFFM.png" alt="TFFM Logo" class="app-header__logo" />
+    </div>
+    <h1 class="app-header__title">ใบสมัครงานออนไลน์</h1>
+    <p class="app-header__subtitle">บริษัท ไทยฟู้ดส์ อาหารสัตว์ จำกัด (Thai Foods Feed Mills Co., Ltd.)</p>
+  </header>
+
+  <!-- ==================== STEPPER ==================== -->
+  <nav class="stepper" aria-label="ขั้นตอนการกรอกใบสมัคร">
+    <div class="stepper__item active" data-step="1">
+      <div class="stepper__circle"><span class="step-number">1</span><span class="check-icon">✓</span></div>
+      <span class="stepper__label">ข้อมูลส่วนตัว</span>
+    </div>
+    <div class="stepper__item" data-step="2">
+      <div class="stepper__circle"><span class="step-number">2</span><span class="check-icon">✓</span></div>
+      <span class="stepper__label">การศึกษา</span>
+    </div>
+    <div class="stepper__item" data-step="3">
+      <div class="stepper__circle"><span class="step-number">3</span><span class="check-icon">✓</span></div>
+      <span class="stepper__label">ฝึกงาน</span>
+    </div>
+    <div class="stepper__item" data-step="4">
+      <div class="stepper__circle"><span class="step-number">4</span><span class="check-icon">✓</span></div>
+      <span class="stepper__label">ประสบการณ์</span>
+    </div>
+    <div class="stepper__item" data-step="5">
+      <div class="stepper__circle"><span class="step-number">5</span><span class="check-icon">✓</span></div>
+      <span class="stepper__label">ทักษะ &amp; เอกสาร</span>
+    </div>
+    <div class="stepper__item" data-step="6">
+      <div class="stepper__circle"><span class="step-number">6</span><span class="check-icon">✓</span></div>
+      <span class="stepper__label">ตรวจสอบ</span>
+    </div>
+  </nav>
+
+  <!-- ==================== FORM CARD ==================== -->
+  <main class="form-card">
+    <form id="applicationForm" novalidate>
+
+      <!-- ========== STEP 1: ข้อมูลส่วนตัว ========== -->
+      <section class="form-step active" data-step="1">
+        <div class="form-step__header">
+          <h2 class="form-step__title">
+            <span class="step-icon">👤</span>
+            ข้อมูลส่วนตัว
+          </h2>
+          <p class="form-step__desc">กรุณากรอกข้อมูลพื้นฐานของคุณ</p>
+        </div>
+
+        <div class="form-row single">
+          <div class="form-group">
+            <label for="fullName">ชื่อ-นามสกุล <span class="required">*</span></label>
+            <input type="text" id="fullName" name="fullName" class="form-input" placeholder="เช่น สมชาย ใจดี" required />
+            <div class="error-message" id="fullName-error">⚠ กรุณากรอกชื่อ-นามสกุล</div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">เบอร์โทรศัพท์ <span class="required">*</span></label>
+            <input type="tel" id="phone" name="phone" class="form-input" placeholder="0XX-XXX-XXXX" maxlength="12" required />
+            <div class="error-message" id="phone-error">⚠ กรุณากรอกเบอร์โทรศัพท์ให้ถูกต้อง</div>
+          </div>
+          <div class="form-group">
+            <label for="emergencyPhone">เบอร์โทรฉุกเฉิน <span class="required">*</span></label>
+            <input type="tel" id="emergencyPhone" name="emergencyPhone" class="form-input" placeholder="0XX-XXX-XXXX" maxlength="12" required />
+            <div class="error-message" id="emergencyPhone-error">⚠ กรุณากรอกเบอร์โทรฉุกเฉิน</div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="birthDate">วันเดือนปีเกิด <span class="required">*</span></label>
+            <input type="date" id="birthDate" name="birthDate" class="form-input" required />
+            <div class="error-message" id="birthDate-error">⚠ กรุณาเลือกวันเดือนปีเกิด</div>
+          </div>
+          <div class="form-group">
+            <label for="age">อายุ (ปี)</label>
+            <input type="number" id="age" name="age" class="form-input" placeholder="คำนวณอัตโนมัติ" readonly tabindex="-1" />
+          </div>
+        </div>
+
+        <div class="form-row single">
+          <div class="form-group">
+            <label for="address">ที่อยู่ <span class="required">*</span></label>
+            <input type="text" id="address" name="address" class="form-input" placeholder="บ้านเลขที่ หมู่ ซอย ถนน ตำบล อำเภอ จังหวัด รหัสไปรษณีย์" required />
+            <div class="error-message" id="address-error">⚠ กรุณากรอกที่อยู่</div>
+          </div>
+        </div>
+
+        <div class="form-row single">
+          <div class="form-group mb-0">
+            <label for="position">ตำแหน่งที่สนใจ <span class="optional-badge">ไม่บังคับ</span></label>
+            <input type="text" id="position" name="position" class="form-input" placeholder="เช่น พนักงานฝ่ายผลิต, ช่างเทคนิค" />
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== STEP 2: ประวัติการศึกษา ========== -->
+      <section class="form-step" data-step="2">
+        <div class="form-step__header">
+          <h2 class="form-step__title">
+            <span class="step-icon">🎓</span>
+            ประวัติการศึกษาสูงสุด
+          </h2>
+          <p class="form-step__desc">กรุณากรอกวุฒิการศึกษาสูงสุดของคุณ</p>
+        </div>
+
+        <div class="form-row single">
+          <div class="form-group">
+            <label for="institution">ชื่อสถานศึกษา <span class="required">*</span></label>
+            <input type="text" id="institution" name="institution" class="form-input" placeholder="เช่น มหาวิทยาลัยเกษตรศาสตร์" required />
+            <div class="error-message" id="institution-error">⚠ กรุณากรอกชื่อสถานศึกษา</div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="degree">วุฒิการศึกษา <span class="required">*</span></label>
+            <select id="degree" name="degree" class="form-select" required>
+              <option value="" disabled selected>— เลือกวุฒิการศึกษา —</option>
+              <option value="ต่ำกว่า ม.3">ต่ำกว่า ม.3</option>
+              <option value="ม.3">มัธยมศึกษาตอนต้น (ม.3)</option>
+              <option value="ม.6">มัธยมศึกษาตอนปลาย (ม.6)</option>
+              <option value="ปวช.">ประกาศนียบัตรวิชาชีพ (ปวช.)</option>
+              <option value="ปวส.">ประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.)</option>
+              <option value="ปริญญาตรี">ปริญญาตรี</option>
+              <option value="ปริญญาโท">ปริญญาโท</option>
+              <option value="ปริญญาเอก">ปริญญาเอก</option>
+            </select>
+            <div class="error-message" id="degree-error">⚠ กรุณาเลือกวุฒิการศึกษา</div>
+          </div>
+          <div class="form-group">
+            <label for="gpa">เกรดเฉลี่ย (GPA) <span class="required">*</span></label>
+            <input type="number" id="gpa" name="gpa" class="form-input" placeholder="เช่น 3.25" step="0.01" min="0" max="4" required />
+            <div class="error-message" id="gpa-error">⚠ กรุณากรอกเกรดเฉลี่ย (0.00 – 4.00)</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== STEP 3: ประวัติการฝึกงาน ========== -->
+      <section class="form-step" data-step="3">
+        <div class="form-step__header">
+          <h2 class="form-step__title">
+            <span class="step-icon">🏢</span>
+            ประวัติการฝึกงาน
+          </h2>
+          <p class="form-step__desc">หากไม่มีประวัติการฝึกงาน สามารถข้ามขั้นตอนนี้ได้</p>
+        </div>
+
+        <div class="dynamic-entries" id="internshipEntries">
+          <!-- dynamic cards will be inserted here -->
+        </div>
+
+        <div class="empty-state" id="internshipEmpty">
+          <div class="empty-state__icon">📋</div>
+          <p>ยังไม่มีข้อมูลการฝึกงาน</p>
+        </div>
+
+        <button type="button" class="btn-add-entry" id="addInternship">
+          <span class="plus-icon">+</span> เพิ่มประวัติการฝึกงาน
+        </button>
+      </section>
+
+      <!-- ========== STEP 4: ประสบการณ์ทำงาน ========== -->
+      <section class="form-step" data-step="4">
+        <div class="form-step__header">
+          <h2 class="form-step__title">
+            <span class="step-icon">💼</span>
+            ประสบการณ์ทำงาน
+          </h2>
+          <p class="form-step__desc">หากไม่มีประสบการณ์ทำงาน สามารถข้ามขั้นตอนนี้ได้</p>
+        </div>
+
+        <div class="dynamic-entries" id="workEntries">
+          <!-- dynamic cards will be inserted here -->
+        </div>
+
+        <div class="empty-state" id="workEmpty">
+          <div class="empty-state__icon">📋</div>
+          <p>ยังไม่มีข้อมูลประสบการณ์ทำงาน</p>
+        </div>
+
+        <button type="button" class="btn-add-entry" id="addWork">
+          <span class="plus-icon">+</span> เพิ่มประสบการณ์ทำงาน
+        </button>
+      </section>
+
+      <!-- ========== STEP 5: ทักษะ & เอกสาร ========== -->
+      <section class="form-step" data-step="5">
+        <div class="form-step__header">
+          <h2 class="form-step__title">
+            <span class="step-icon">⭐</span>
+            ทักษะ &amp; เอกสารแนบ
+          </h2>
+          <p class="form-step__desc">ระบุทักษะของคุณและแนบเอกสารที่เกี่ยวข้อง</p>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="hardSkills">Hard Skills <span class="optional-badge">ไม่บังคับ</span></label>
+            <input type="text" id="hardSkills" name="hardSkills" class="form-input" placeholder="เช่น Excel, AutoCAD, Python" />
+          </div>
+          <div class="form-group">
+            <label for="softSkills">Soft Skills <span class="optional-badge">ไม่บังคับ</span></label>
+            <input type="text" id="softSkills" name="softSkills" class="form-input" placeholder="เช่น การทำงานเป็นทีม, สื่อสารดี" />
+          </div>
+        </div>
+
+        <!-- File Upload -->
+        <div class="form-group">
+          <label>Resume / Certificate <span class="optional-badge">ไม่บังคับ</span></label>
+          <div class="upload-zone" id="uploadZone">
+            <div class="upload-zone__icon">📁</div>
+            <p class="upload-zone__text">ลากไฟล์มาวางที่นี่ หรือ <strong>คลิกเพื่อเลือกไฟล์</strong></p>
+            <p class="upload-zone__hint">รองรับ PDF, JPG, PNG — ไม่จำกัดจำนวนไฟล์</p>
+            <input type="file" id="fileUpload" multiple accept=".pdf,.jpg,.jpeg,.png" />
+          </div>
+          <div class="file-list" id="fileList"></div>
+          <div class="error-message" id="fileUpload-error">⚠ กรุณาแนบไฟล์ Resume หรือ Certificate อย่างน้อย 1 ไฟล์</div>
+        </div>
+
+        <!-- Video URL -->
+        <div class="form-row single">
+          <div class="form-group mb-0">
+            <label for="videoUrl">วิดีโอแนะนำตัว (URL) <span class="optional-badge">ไม่บังคับ</span></label>
+            <input type="url" id="videoUrl" name="videoUrl" class="form-input" placeholder="https://example.com/video.mp4 หรือ YouTube URL" />
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== STEP 6: ตรวจสอบข้อมูล ========== -->
+      <section class="form-step" data-step="6">
+        <div class="form-step__header">
+          <h2 class="form-step__title">
+            <span class="step-icon">✅</span>
+            ตรวจสอบข้อมูลก่อนส่ง
+          </h2>
+          <p class="form-step__desc">กรุณาตรวจสอบข้อมูลทั้งหมดให้ถูกต้องก่อนยืนยันส่งใบสมัคร</p>
+        </div>
+
+        <div id="reviewContent">
+          <!-- populated by JS -->
+        </div>
+      </section>
+
+      <!-- ========== FORM ACTIONS ========== -->
+      <div class="form-actions">
+        <button type="button" class="btn btn-secondary" id="btnPrev" style="visibility:hidden">
+          ← ย้อนกลับ
+        </button>
+        <button type="button" class="btn btn-primary" id="btnNext">
+          <span class="btn-text">ถัดไป →</span>
+        </button>
+        <button type="button" class="btn btn-submit hidden" id="btnSubmit">
+          <span class="spinner"></span>
+          <span class="btn-text">📤 ส่งใบสมัครงาน</span>
+        </button>
+      </div>
+
+    </form>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="app-footer">
+    <p>© 2026 บริษัท ไทยฟู้ดส์ อาหารสัตว์ จำกัด — Thai Foods Feed Mills Co., Ltd.</p>
+  </footer>
+
+</div>
+
+<!-- ==================== SUCCESS / ERROR OVERLAY ==================== -->
+<div class="result-overlay" id="resultOverlay">
+  <div class="result-card">
+    <div class="result-card__icon" id="resultIcon"></div>
+    <h3 class="result-card__title" id="resultTitle"></h3>
+    <p class="result-card__desc" id="resultDesc"></p>
+    <button class="btn btn-primary" id="resultBtn" onclick="location.reload()">
+      ตกลง
+    </button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
