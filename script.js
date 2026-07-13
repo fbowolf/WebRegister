@@ -9,7 +9,7 @@
 // ─────────────────────────────────────────────
 //  🔧 CONFIGURATION — ใส่ n8n Webhook URL ที่นี่
 // ─────────────────────────────────────────────
-const N8N_WEBHOOK_URL = 'https://bankserver.app.n8n.cloud/webhook/a7d103d0-5034-45ea-9384-5193d99c5bab';
+const N8N_WEBHOOK_URL = 'https://bankserver.app.n8n.cloud/webhook/a7d103d0-5034-45ea-9364-5193d99c5bab';
 
 // ─────────────────────────────────────────────
 //  DOM References
